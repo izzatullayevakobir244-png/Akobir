@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: telegram-music-bot
+    runtime: docker
+    dockerfilePath: Dockerfile
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMINS
+        sync: false
+      - key: BOT_NAME
+        value: HitMusic Bot
+      - key: BOT_USERNAME
+        value: my_hitmusic_bot
+      - key: GEMINI_API_KEY
+        sync: false
+
